@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ChatPro</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_in_to_continue">Sign in to Continue</string>
+    <string name="e_mail_id">Email id</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="l_o_g_i_n">L  O  G  I  N</string>
+    <string name="google_signin">Google SignIn</string>
+    <string name="s_i_g_n_u_p">S  I  G  N  U  P</string>
+    <string name="fullname">Fullname</string>
+    <string name="_01_01_1970">01/01/1970</string>
+    <string name="choose">Choose</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

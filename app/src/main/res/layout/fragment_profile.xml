@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--COVER IMAGE-->
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/coverImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/coverimage" />
+
+            <!--PROFILE IMAGE-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="120dp"
+                android:contentDescription="@string/app_name"
+                android:padding="20dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <!--ALL TEXT COMPONENTS  -->
+            <LinearLayout
+                android:id="@+id/userDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/profileImage"
+                android:orientation="vertical"
+                android:padding="6dp"
+                android:background="#51222247">
+
+                <!--FULL NAME-->
+                <TextView
+                    android:id="@+id/name"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textAlignment="center"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+                <!--EMAIL-->
+                <TextView
+                    android:id="@+id/email"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--PHONE-->
+                <TextView
+                    android:id="@+id/phone"
+                    android:textColor="#000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <!--DATE OF BIRTH-->
+                <TextView
+                    android:textColor="#000"
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:ellipsize="marquee"
+                    android:singleLine="true"
+                    android:text="@string/app_name"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userDetailsLayout"
+                android:layout_margin="15dp"
+                android:padding="2dp">
+
+                <TextView
+                    android:inputType="textMultiLine"
+                    android:padding="7dp"
+                    android:id="@+id/statustv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    tools:ignore="TextViewEdits" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <!--FAB FOR EDIT PROFILE-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:background="@null"
+        android:src="@drawable/person_high"
+        app:backgroundTint="#fff"
+        app:fabSize="auto" />
+
+</FrameLayout>

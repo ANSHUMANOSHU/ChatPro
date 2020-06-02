@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:padding="3dp"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:layout_margin="5dp"
+    android:id="@+id/itemuser_layout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:layout_weight="20"
+        android:layout_height="50dp"
+        android:src="@drawable/person_high"
+        android:padding="1dp"
+        android:layout_margin="4dp"
+        android:background="@null"
+        android:id="@+id/userProfileImage"/>
+
+    <LinearLayout
+        android:background="@null"
+        android:layout_width="0dp"
+        android:layout_weight="70"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="22sp" />
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="E-Mail"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:src="@color/red"
+        android:id="@+id/onlinestatus"
+        android:layout_height="match_parent"
+        android:layout_weight="10"/>
+
+
+
+</LinearLayout>

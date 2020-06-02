@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatActivity">
+
+    <!--Toolbar with UserImage Name and Status-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorAccent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:onClick="showUserProfileDetails">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_profile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/person_high" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:id="@+id/receiverName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Online"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--RecyclerView-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fdeded"
+        android:padding="2dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottomview"/>
+
+    <!--Bottom Layout-->
+    <LinearLayout
+        android:id="@+id/bottomview"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:padding="2dp"
+        android:minHeight="50dp">
+
+        <ImageView
+            android:onClick="attachment"
+            android:layout_gravity="center"
+            android:id="@+id/attachment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/attachment"
+            android:layout_weight="10"
+            android:background="@null"
+            android:contentDescription="@string/app_name" />
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:background="@null"
+            android:hint="Start Typing..."
+            android:inputType="textMultiLine|textCapWords"
+            android:textSize="18sp"
+            tools:ignore="NestedWeights" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/sendbtn"
+            android:layout_weight="10"
+            android:background="@null"
+            android:contentDescription="@string/app_name" />
+    </LinearLayout>
+
+</RelativeLayout>
